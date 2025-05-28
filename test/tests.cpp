@@ -7,49 +7,48 @@
 
 TEST(CheckPrimeTest, PrimeNumbers) {
   EXPECT_TRUE(checkPrime(2));
-  EXPECT_TRUE(checkPrime(3));
-  EXPECT_TRUE(checkPrime(5));
-  EXPECT_TRUE(checkPrime(7));
-  EXPECT_TRUE(checkPrime(11));
+  EXPECT_TRUE(checkPrime(13));
+  EXPECT_TRUE(checkPrime(17));
+  EXPECT_TRUE(checkPrime(19));
+  EXPECT_TRUE(checkPrime(23));
 }
 
 TEST(CheckPrimeTest, NonPrimeNumbers) {
   EXPECT_FALSE(checkPrime(0));
   EXPECT_FALSE(checkPrime(1));
-  EXPECT_FALSE(checkPrime(4));
-  EXPECT_FALSE(checkPrime(6));
-  EXPECT_FALSE(checkPrime(9));
+  EXPECT_FALSE(checkPrime(8));
+  EXPECT_FALSE(checkPrime(10));
+  EXPECT_FALSE(checkPrime(15));
 }
 
 TEST(NthPrimeTest, FirstPrime) {
   EXPECT_EQ(nPrime(1), 2);
 }
 
-TEST(NthPrimeTest, SecondPrime) {
-  EXPECT_EQ(nPrime(2), 3);
+TEST(NthPrimeTest, FifthPrime) {
+  EXPECT_EQ(nPrime(5), 11);
 }
 
-TEST(NthPrimeTest, TenthPrime) {
-  EXPECT_EQ(nPrime(10), 29);
+TEST(NthPrimeTest, TwelfthPrime) {
+  EXPECT_EQ(nPrime(12), 37);
 }
 
-TEST(NextPrimeTest, After2) {
-  EXPECT_EQ(nextPrime(2), 3);
+TEST(NextPrimeTest, After3) {
+  EXPECT_EQ(nextPrime(3), 5);
 }
 
-TEST(NextPrimeTest, After14) {
-  EXPECT_EQ(nextPrime(14), 17);
+TEST(NextPrimeTest, After15) {
+  EXPECT_EQ(nextPrime(15), 17);
 }
 
-TEST(NextPrimeTest, After17) {
-  EXPECT_EQ(nextPrime(17), 19);
+TEST(NextPrimeTest, After23) {
+  EXPECT_EQ(nextPrime(23), 29);
 }
 
-TEST(SumPrimeTest, SumBelow10) {
-  EXPECT_EQ(sumPrime(10), 17);
+TEST(SumPrimeTest, SumBelow15) {
+  EXPECT_EQ(sumPrime(15), 41);
 }
 
-TEST(SumPrimeTest, SumBelow20) {
-  EXPECT_EQ(sumPrime(20), 77);
+TEST(SumPrimeTest, SumBelow30) {
+  EXPECT_EQ(sumPrime(30), 129);
 }
-
